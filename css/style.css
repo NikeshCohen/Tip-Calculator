@@ -1,0 +1,277 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+/* Variables */
+
+:root {
+  --Strong-cyan: #26c0ab;
+  --Light-cyan: #9fe8df;
+  --Very-dark-cyan: #00494d;
+  --Dark-grayish-cyan: #5e7a7d;
+  --Grayish-cyan: #7f9c9f;
+  --Light-grayish-cyan: #c5e4e7;
+  --Very-light-grayish-cyan: #f4fafa;
+  --White: #ffff;
+  --br: 3rem;
+}
+
+/* HTML Elements */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--Light-grayish-cyan);
+}
+
+/* Reuseable Elements */
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.text {
+  font-size: 1.4rem;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Main Section */
+
+.logo {
+  width: 10rem;
+}
+
+.main {
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  height: 100vh;
+}
+
+/* Info */
+
+.info {
+  background-color: var(--White);
+  box-shadow: 8px 15.5px 17px 3px rgba(0, 0, 0, 0.15);
+  border-radius: var(--br);
+  align-items: center;
+  gap: 4rem;
+  min-width: 100rem;
+  min-height: 50rem;
+}
+
+/* Input Section */
+
+.input {
+  justify-content: space-between;
+  padding: 2rem 0 2rem 2rem;
+  margin: 3rem 0 3rem 3rem;
+  height: 90%;
+  width: 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-text {
+  color: var(--Dark-grayish-cyan);
+  margin-bottom: 0.6rem;
+}
+
+.data-input {
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  text-align: right;
+  border: 0.2rem solid transparent;
+  transition: all 0.2s ease-in-out;
+  font-weight: 7000;
+  border-radius: 0.6rem;
+  font-size: 2.4rem;
+  padding: 3rem 1rem;
+  height: 4rem;
+  width: 100%;
+}
+
+.data-input:first-child {
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.data-input:focus {
+  border: 0.2rem solid var(--Strong-cyan);
+}
+
+.bill-input,
+.no-people-input {
+  position: relative;
+}
+
+.currency {
+  color: var(--Grayish-cyan);
+  position: absolute;
+  font-size: 2.4rem;
+  top: 40px;
+  left: 10px;
+}
+
+.tip-input-text {
+  margin-bottom: 2rem;
+}
+
+.tips {
+  gap: 1rem;
+}
+
+.tips-column {
+  justify-content: space-between;
+}
+
+.tip-percentage-btn {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-light-grayish-cyan);
+  font-size: 2.4rem;
+  width: 13rem;
+  height: 5rem;
+  border-radius: 0.6rem;
+}
+
+.tip-percentage-btn:hover {
+  background-color: var(--Light-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip-percentage-input {
+  background-color: var(--Very-light-grayish-cyan);
+  text-align: center;
+  width: 13rem;
+  height: 5rem;
+  padding: 2rem;
+}
+
+.icon {
+  position: absolute;
+  width: 2rem;
+  top: 47px;
+  left: 10px;
+}
+
+.calculator-btn {
+  background-color: var(--Strong-cyan);
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0.6rem 0.6rem 0;
+  padding: 0.8rem;
+}
+
+.calculator-btn:hover {
+  background-color: var(--Light-grayish-cyan);
+}
+
+.btn-icon {
+  color: var(--Very-dark-cyan);
+  height: 3rem;
+  width: 3rem;
+}
+
+.error-text {
+  color: red;
+  display: none;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.6rem;
+  top: -1px;
+  right: 0;
+}
+
+.error {
+  border: 0.2rem solid red;
+}
+
+.show {
+  display: block;
+}
+
+/* Output Section */
+
+.output {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 50%;
+  padding: 4rem;
+  margin: 3rem 3rem 3rem 0;
+  border-radius: var(--br);
+}
+
+.tip-amount {
+  justify-content: space-between;
+  align-items: center;
+  width: 40rem;
+}
+
+.tip-amount:first-child {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.tip-per-person,
+.tip-total {
+  font-size: 2rem;
+}
+
+.tip-per-person span {
+  color: var(--Dark-grayish-cyan);
+}
+
+.tip-per-person-amount,
+.tip-total-amount {
+  color: var(--Strong-cyan);
+  font-size: 4.6rem;
+}
+
+.reset-btn {
+  background-color: var(--Light-cyan);
+  text-transform: uppercase;
+  border: 0.2rem solid transparent;
+  width: 100%;
+  border-radius: 0.6rem;
+  font-size: 2.4rem;
+  padding: 1rem;
+}
+
+.reset-btn:hover {
+  color: var(--Light-cyan);
+  background-color: transparent;
+  border: 0.2rem solid var(--Light-cyan);
+}
+
+.reset-btn:active {
+  transform: translateY(0.2rem);
+}

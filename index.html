@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="Javascript/script.js" defer></script>
+    <title>Tip calculator</title>
+  </head>
+  <body>
+    <div class="flex column main">
+      <img src="images/logo.svg" alt="logo" class="logo" />
+
+      <div class="flex info">
+        <div class="flex column input">
+          <div class="bill-input">
+            <p class="text input-text bill-input-text">Bill</p>
+            <p class="text currency">R</p>
+            <input type="number" min="1" class="data-input bill-amount" />
+          </div>
+
+          <div class="tip-input">
+            <p class="text input-text tip-input-text">Select Tip %</p>
+            <div class="flex column tips">
+              <div class="flex tips-column">
+                <button value="5" class="btn tip-percentage-btn">5%</button>
+                <button value="10" class="btn tip-percentage-btn">10%</button>
+                <button value="15" class="btn tip-percentage-btn">15%</button>
+              </div>
+              <div class="flex tips-column">
+                <button value="25" class="btn tip-percentage-btn">25%</button>
+                <button value="50" class="btn tip-percentage-btn">50%</button>
+                <input
+                  type="number"
+                  min="1"
+                  max="1000"
+                  placeholder="Custom"
+                  class="data-input tip-percentage-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="no-people-input">
+            <p class="text input-text no-people-input-text">Number of People</p>
+            <p class="error-text">Can't be zero</p>
+            <img src="images/icon-person.svg" alt="icon" class="icon" />
+            <div class="flex no-people-flied">
+              <input type="number" min="1" class="data-input no-people" />
+              <button class="flex btn calculator-btn">
+                <ion-icon name="calculator-outline" class="btn-icon"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex column output">
+          <div class="flex column results">
+            <div class="flex tip-amount">
+              <div class="tip-per-person">
+                Tip Amount <br /><span>/ person</span>
+              </div>
+              <div class="tip-per-person-amount">R0.00</div>
+            </div>
+            <div class="flex tip-amount">
+              <div class="tip-total">Tip Total</div>
+              <div class="tip-total-amount">R0.00</div>
+            </div>
+          </div>
+          <button class="btn reset-btn">reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
