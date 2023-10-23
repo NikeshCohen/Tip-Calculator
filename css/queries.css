@@ -57,6 +57,10 @@
     font-size: 1.6rem;
   }
 
+  .icon:first-child {
+    top: -40px;
+  }
+
   .results {
     align-items: center;
   }

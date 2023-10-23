@@ -127,8 +127,14 @@ input::-webkit-inner-spin-button {
 }
 
 .bill-input,
+.tip-input,
 .no-people-input {
   position: relative;
+}
+
+.bill-amount,
+.no-people {
+  padding-left: 4rem;
 }
 
 .currency {
@@ -161,6 +167,11 @@ input::-webkit-inner-spin-button {
 }
 
 .tip-percentage-btn:hover {
+  background-color: var(--Light-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.active {
   background-color: var(--Light-cyan);
   color: var(--Very-dark-cyan);
 }
@@ -209,7 +220,7 @@ input::-webkit-inner-spin-button {
 }
 
 .error {
-  border: 0.2rem solid red;
+  border: 0.2rem solid red !important;
 }
 
 .show {
@@ -242,16 +253,17 @@ input::-webkit-inner-spin-button {
 }
 
 .tip-per-person,
-.tip-total {
+.total-bill {
   font-size: 2rem;
 }
 
-.tip-per-person span {
+.tip-per-person span,
+.total-bill span {
   color: var(--Dark-grayish-cyan);
 }
 
 .tip-per-person-amount,
-.tip-total-amount {
+.total-bill-amount {
   color: var(--Strong-cyan);
   font-size: 4.6rem;
 }
