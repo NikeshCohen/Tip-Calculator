@@ -12,8 +12,6 @@ const tipAmount = document.querySelector(".tip-per-person-amount");
 const totalAmount = document.querySelector(".total-bill-amount");
 const reset = document.querySelector(".reset-btn");
 
-const errorText = document.querySelectorAll(".error-text");
-
 ///////// VARIABLES /////////
 
 let bill;
@@ -25,18 +23,6 @@ let tipPerPerson;
 let totalPerPerson;
 
 ///////// FUNCTIONS /////////
-
-/// Find Tip Value
-
-const findTip = () => {
-  tipPercentageBtnAll.forEach((btn) => {
-    if (btn.classList.contains("active")) {
-      tipPercentage = btn.value;
-    }
-  });
-
-  return tipPercentage;
-};
 
 /// Clear All Active Classes
 
@@ -50,6 +36,23 @@ const clearActiveClass = () => {
 
 const addActiveClass = (btn) => {
   btn.classList.add("active");
+};
+
+/// Find Tip Value
+
+const findTip = () => {
+  if (tipPercentageInput.value) {
+    clearActiveClass();
+    tipPercentage = tipPercentageInput.value;
+  } else {
+    tipPercentageBtnAll.forEach((btn) => {
+      if (btn.classList.contains("active")) {
+        tipPercentage = btn.value;
+      }
+    });
+  }
+
+  return tipPercentage;
 };
 
 /// Calculate Output
@@ -73,6 +76,7 @@ const calcOutput = () => {
 const clearAllFlieds = () => {
   billAmount.value = "";
   numPeople.value = "";
+  tipPercentageInput.value = "";
 
   tipAmount.innerHTML = "R0.00";
   totalAmount.innerHTML = "R0.00";
@@ -108,7 +112,7 @@ calculate.addEventListener("click", () => {
   if (billAmount.value && numPeople.value) {
     calcOutput();
   } else {
-    errorText.classList.add("show");
+    alert("Please fill in all flieds");
   }
 });
 

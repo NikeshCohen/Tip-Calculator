@@ -70,7 +70,8 @@
     gap: 5rem;
   }
 
-  .tip-per-person span {
+  .tip-per-person span,
+  .total-bill span {
     font-size: 1.4rem;
   }
 }
@@ -108,11 +109,15 @@
   }
 
   .tip-per-person span {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .total-bill span {
+    font-size: 1rem;
   }
 
   .tip-per-person,
-  .tip-total {
+  .total-bill {
     font-size: 1.6rem;
   }
 
